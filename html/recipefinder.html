@@ -1,52 +1,112 @@
-	<!doctype html> 
+<!doctype html> 
 <html lang="en">
 	<head>
 		<!--Bethany Thielen-->
-		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
 		<title>Thyme for Dinner</title>
 		<meta charset="utf-8">
-		<meta name="description" content="Find recipes based on the ingredients you have in the fridge. Browse our editor's picks and search our extensive database of recipes.">
-		<link rel="stylesheet" href="../css/recipes.css">
+		<meta name="description" content="Find recipes based on the ingredients you have in the refridgerator. Browse our editor's picks and search our extensive database of recipes.">
+		<link rel="stylesheet" href="../css/home.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
 	</head> 
 	<body> 
 		<div id="wrapper">
-			<header>
-				<h1>Recipe Finder</h1>
-				<a href="index.html"><img src="../images/logo.png" alt="Thyme For Dinner Logo"></a>
-				<nav>
-					<h2>Navigation</h2>
-					<ul>
-						<li><a href="index.html">home</a></li>
-						<li><a href="about.html">recipes</a></li>
-						<li><a href="contact.html">about</a></li>
-					</ul>
-				</nav>
-				<img src="../images/headerimage.png" alt="header image">
+
+			<header class="header">
+				<div id="headerContent">
+					<h1 class="hidden">Thyme for Dinner Home</h1>
+					<a href="index.html"><img src="../images/logo.png" alt="Thyme For Dinner Logo"></a>
+
+				  <input class="menu-btn" type="checkbox" id="menu-btn" />
+				  <label class="menu-icon" for="menu-btn"><span class="navicon">Menu</span></label>
+
+				  <div class="menu">
+				  	<nav>
+				  		<h2 class="hidden">Navigation</h2>
+					  	<ul>
+						    <li> <a id="currentPage" href="index.html">home</a></li>
+							<li><a id="middleNav" href="#">recipes</a></li>
+							<li><a href="#">about</a></li>
+						</ul>
+					</nav>
+				  </div>
+			</div>
+
 			</header>
 			<main>
 
 				<section>
-					<h2>Recipe Finder</h2>
+					<h2 class="hiddenDesktop">Recipe Finder</h2>
 					<div id="recipeBar">
-						<button>&plus; Add Ingredient</button>
+						<button class="hiddenDesktop" class="button">&plus; Add Ingredient</button>
 						<form>
-							<input type="search" name="recipesearch" placeholder="Search recipes">
-							<span class="fa fa-search"></span>
-							<select>
+							<div id="searchBar">
+								<input type="search" name="recipesearch" placeholder="Enter keywords to find recipes">
+								<span id="magnifyingGlass" class="fa fa-search"></span>
+							</div>
+
+							<select class="hiddenDesktop">
 							  <option id="15">&#60; 15 mins</option>
 							  <option id="30">&#60; 30 mins</option>
 							  <option id="45">&#60;</option>
 							  <option id="none">No limit</option>
 							</select>
 						</form>
-						<span class="ingredient">&minus; Radishes</span>
-						<span class="ingredient">&minus; Mayonaise</span>
-						<span class="ingredient">&minus; Eggs</span>
+
+						
+						<div id="ingredientContainer">
+							<button class="button">&plus; Add Ingredient</button>
+							<span class="ingredient">Radishes&minus; </span>
+							<span class="ingredient">Mayonaise&minus;</span>
+							<span class="ingredient">Eggs&minus; </span>
+						</div>
+
 					</div>
 				</section>
 				<aside>
 					<h2>Filter Results</h2>
 					<p>clear filters</p>
+					<div class="tab">
+				      <input class="input" id="tab-one" type="checkbox" name="tabs">
+				      <label class="label" for="tab-one">Label One</label>
+				      <div class="tab-content">
+				        <p><form>
+						 	<input type="checkbox" name="soy" id="soy">
+						    <label for="soy">Soy</label>
+
+						    <input type="checkbox" name="wheat" id="wheat">
+						    <label for="wheat">Wheat</label>
+
+						   	  <label for="dairy">Dairy</label>
+						    <input type="checkbox" name="dairy" id="dairy">
+						  
+						    <input type="checkbox" name="treenuts" id="treenuts">
+						    <label for="treenuts">Tree nuts</label>
+						</form></p>
+	 				 	</div>
+						 </div>
+
+				   	<div class="tab">
+				      <input class="input" id="tab-two" type="checkbox" name="tabs">
+				      <label class="label" for="tab-two" class="label">Label Two</label>
+				      <div class="tab-content">
+				        <p>Lorem ipsum dolor sit amet, consectetur adipisicm? Saepe, itaque.</p>
+				      </div>
+				    </div>
+				    <div class="tab">
+				      <input class="input" id="tab-three" type="checkbox" name="tabs">
+				      <label class="label" for="tab-three">Label Three</label>
+				      <div class="tab-content">
+				        <p>Lorem ipsum as iure facere dolorum adipisci eum? Saepe, itaque.</p>
+					 </div>
+					</div>
+				</aside>
+
+
+
+					<!--
+
 
 					<button class="accordion">Allergies</button>
 					<div class="panel">
@@ -107,7 +167,7 @@
 						    <label for="delish">Delish</label>
 						</form>
 					</div>
-				</aside>
+				</aside> -->
 
 				<section>
 					<h2> Search Results:</h2>
@@ -130,14 +190,13 @@
 				<span id="end">End results</span>
 				<hr>
 
-
 			</main>
 			<footer>
-				<div>
-					<h2>Contact Info</h2>
+				<div id="footer">
+					<h2 class="hidden">Footer</h2>
 					<p>Call us at 480-245-1357</p>
-					<p>Email us at support@thymefordinner.com</p>
-					<p>[For educational purposes only]</p>
+					<p class="hiddenDesktop">Email us at support@thymefordinner.com</p>
+					<p class="hiddenDesktop">[For educational purposes only]</p>
 				</div>
 			</footer>
 		</div>

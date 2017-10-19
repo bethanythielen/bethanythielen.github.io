@@ -86,16 +86,10 @@ font-family: 'Open Sans', arial, sans-serif;
 
 
 
-button {
-
-
-	
-}
-
 .button  {
 
 		background-color: #d85300;
-	border: 2px solid white;
+	border: 1.3px solid white;
 	display: block;
 	color: white;
 	font-family: bebas, arial, sans-serif;
@@ -103,13 +97,38 @@ button {
 	text-decoration: none;
 }
 
+.ingredient {
+
+	background-color: rgba(255,255,255.5);
+	border: 1px solid rgb(46,46,46);
+	
+}
+
+#ingredientContainer {
+
+background-color: #2e2e2e;
+
+}
+
+.ingredient {
+
+	background-color: rgba(255, 255, 255, .5);
+	font-family: bebas;
+
+}
+
+
 /*end global styles*/
 
+
+/*header styles*/
 
 
 
 .hidden {
-	display: none;
+	position: absolute !important;
+   top: -9999px !important;
+   left: -9999px !important;
 }
 
 .hiddenDesktop {
@@ -197,7 +216,7 @@ header img:nth-child(1) {
 
   nav ul li a:nth-child(1) {
 
-  	color: red;
+  	color: white;
   }
 
  .header li a:visited {
@@ -266,6 +285,8 @@ header img:nth-child(1) {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
+
+/*hero image*/
 
 
 #heroimageText {
@@ -370,6 +391,7 @@ color: white;
 	height:  auto;
 }
 
+
 #footer p {
 
 	font-family: bebas, arial, sans-serif;
@@ -377,4 +399,145 @@ color: white;
 	color: white;
 	font-size: 30px;
 
+}
+
+/*recipes*/
+
+#searchBar {
+
+	position: relative;
+	margin-bottom: 10px;
+	padding-top: 10px 20px;
+}
+
+#searchBar input {
+
+	border-top: 2px solid #2e2e2e;
+	border-bottom: 2px solid #2e2e2e;
+	border-left: 0px solid white;
+	border-right: 0px solid white;
+		height: 53px;
+		width: 100%;
+
+}
+
+#magnifyingGlass {
+	display: inline;
+	font-size: 27px;
+	position: absolute;
+	left: 90%;
+	top: 12px;
+	color: #2e2e2e;
+}
+
+input::placeholder {
+
+font-family: bebas;
+padding-left: 3px;
+font-size: 20px;
+margin-top: 9px;
+line-height: 32px;
+height: 30px;
+}
+
+.ingredient {
+
+	background-color: rgba(255,255,255.5);
+	border: 1px solid rgb(46,46,46);
+	margin: 100px 10px 0 0;
+	padding: 2px;
+}
+
+#ingredientContainer {
+
+background-color: #565656;
+height: 70px;
+	width: 100%; 
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.ingredient {
+
+	background-color: rgba(255, 255, 255, .5);
+	font-family: bebas;
+	margin-top: 100px;
+	padding: 2px 20px;
+	display: inline;
+
+}
+
+#ingredientContainer button {
+	display: inline;
+	margin-top: 18px;
+}
+
+
+
+/* Acordion styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+.input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #16a085;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #1abc9c;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+.input:checked ~ .tab-content {
+  max-height: 10em;
+}
+/* Icon */
+.label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.input[type=checkbox] + label::after {
+  content: "+";
+}
+.input[type=radio] + label::after {
+  content: "\25BC";
+}
+.input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+.input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
 }
