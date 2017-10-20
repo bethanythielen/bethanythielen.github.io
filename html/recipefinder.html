@@ -26,8 +26,8 @@
 				  	<nav>
 				  		<h2 class="hidden">Navigation</h2>
 					  	<ul>
-						    <li> <a id="currentPage" href="index.html">home</a></li>
-							<li><a id="middleNav" href="#">recipes</a></li>
+						    <li> <a href="index.html">home</a></li>
+							<li><a id="currentPage"  class="middleNav" href="#">recipes</a></li>
 							<li><a href="#">about</a></li>
 						</ul>
 					</nav>
@@ -36,8 +36,6 @@
 
 			</header>
 			<main>
-
-				<p>TEST TEST</p>
 
 				<section>
 					<h2 class="hiddenDesktop">Recipe Finder</h2>
@@ -60,49 +58,62 @@
 						
 						<div id="ingredientContainer">
 							<button class="button">&plus; Add Ingredient</button>
-							<span class="ingredient">Radishes&minus; </span>
-							<span class="ingredient">Mayonaise&minus;</span>
-							<span class="ingredient">Eggs&minus; </span>
+							<span class="ingredient">Radishes &minus; </span>
+							<span class="ingredient">Mayonaise &minus;</span>
+							<span class="ingredient">Eggs &minus; </span>
 						</div>
 
 					</div>
 				</section>
 				<aside>
-					<h2>Filter Results</h2>
-					<p>clear filters</p>
+					<h2 class="hiddenDesktop">Filter Results</h2>
+					<p class="hiddenDesktop">clear filters</p>
+
+
+					<!--accordion-->
+
+
 					<div class="tab">
 				      <input class="input" id="tab-one" type="checkbox" name="tabs">
-				      <label class="label" for="tab-one">Label One</label>
+				      <label class="label" for="tab-one">Filter Results</label>
 				      <div class="tab-content">
-				        <p><form>
+
+				        <form>
+
+				       
+
+				        	<h3>Allergies</h3>
+
 						 	<input type="checkbox" name="soy" id="soy">
 						    <label for="soy">Soy</label>
 
 						    <input type="checkbox" name="wheat" id="wheat">
 						    <label for="wheat">Wheat</label>
 
-						   	  <label for="dairy">Dairy</label>
+						   	  
 						    <input type="checkbox" name="dairy" id="dairy">
+						    <label for="dairy">Dairy</label>
 						  
 						    <input type="checkbox" name="treenuts" id="treenuts">
 						    <label for="treenuts">Tree nuts</label>
-						</form></p>
-	 				 	</div>
-						 </div>
 
-				   	<div class="tab">
-				      <input class="input" id="tab-two" type="checkbox" name="tabs">
-				      <label class="label" for="tab-two" class="label">Label Two</label>
-				      <div class="tab-content">
-				        <p>Lorem ipsum dolor sit amet, consectetur adipisicm? Saepe, itaque.</p>
-				      </div>
-				    </div>
-				    <div class="tab">
-				      <input class="input" id="tab-three" type="checkbox" name="tabs">
-				      <label class="label" for="tab-three">Label Three</label>
-				      <div class="tab-content">
-				        <p>Lorem ipsum as iure facere dolorum adipisci eum? Saepe, itaque.</p>
-					 </div>
+						    <hr>
+
+						    <h3>Diet</h3>
+
+						    <input type="checkbox" name="sugar" id="sugar">
+						    <label for="sugar">Low Sugar</label>
+
+						    <input type="checkbox" name="carb" id="carb">
+						    <label for="carb">Low Carb</label>
+
+						    <input type="checkbox" name="fat" id="fat">
+						    <label for="fat">Low Fat</label>
+
+				
+						
+						</form>
+	 				 </div>
 					</div>
 				</aside>
 
@@ -173,24 +184,37 @@
 				</aside> -->
 
 				<section>
-					<h2> Search Results:</h2>
-					<h3>Radish Egg Sandwich</h3>
-					<img src="../images/sandwich.png" alt="sandwich">
-					<p>The radishes bring a crisp, peppery crunch. We layered ours on bread with sprouts to make a gooey, satisfyingly messy sandwich. </p>
-					<a href="https://www.acouplecooks.com/radish-and-egg-salad-sandwiches-in-our-kitchen/" target="_blank">View recipe on Delish</a>
+
+					<h2 id="sectionheaderMobile"> Search Results:</h2>
+					<div class="recipeResults">
+						<h3>Radish Egg Sandwich</h3>
+						<div class="resultsimageContainer">
+							<img src="../images/sandwich.png" alt="sandwich">
+						</div>
+						<p class="hiddenDesktop">The radishes bring a crisp, peppery crunch. We layered ours on bread with sprouts to make a gooey, satisfyingly messy sandwich. </p>
+						<a href="https://www.acouplecooks.com/radish-and-egg-salad-sandwiches-in-our-kitchen/" target="_blank">View recipe on Delish</a>
+					</div>
 			
-					<h3>Vegetable Skillet</h3>
-					<img src="../images/skillet.png" alt="vegetable skillet">
-					<p>All the vegetables in your fridge that you didn’t know what to do with. The perfect meal for any time of the day. </p>
-					<a href="http://allrecipes.com/recipe/25431/outdoor-vegetable-skillet/" target="_blank">View recipe on Allrecipes</a>
-		
-					<h3>Burrito Bowl</h3>
-					<img src="../images/burritobowl.png" alt="buritto bowl">
-					<p>It’s a burrito....in a bowl. A hodge podge of goodness just waiting to be devoured. It can be made as fancy or as simple as you want, to meet your meal time needs</p>
-					<a href="http://www.delish.com/cooking/recipe-ideas/recipes/a51578/loaded-burrito-bowls-recipe/" target="_blank">View recipe on Delish</a>
+					<div class="recipeResults">
+						<h3>Vegetable Skillet</h3>
+						<div class="resultsimageContainer">
+							<img src="../images/skillet.png" alt="vegetable skillet">
+						</div>
+						<p class="hiddenDesktop"> All the vegetables in your fridge that you didn’t know what to do with. The perfect meal for any time of the day. </p>
+						<a href="http://allrecipes.com/recipe/25431/outdoor-vegetable-skillet/" target="_blank"> View recipe on Allrecipes</a>
+					</div>
+
+					<div class="recipeResults">
+						<h3>Burrito Bowl</h3>
+						<div class="resultsimageContainer">
+							<img src="../images/burritobowl.png" alt="buritto bowl">
+						</div>
+						<p class="hiddenDesktop"> It’s a burrito....in a bowl. A hodge podge of goodness just waiting to be devoured. It can be made as fancy or as simple as you want, to meet your meal time needs</p>
+						<a href="http://www.delish.com/cooking/recipe-ideas/recipes/a51578/loaded-burrito-bowls-recipe/" target="_blank">View recipe on Delish</a>
+					</div>
 				</section>
 
-				<span id="end">End results</span>
+				<span id="end" class="hiddenDesktop">End results</span>
 				<hr>
 
 			</main>

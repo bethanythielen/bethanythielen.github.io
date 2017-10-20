@@ -117,6 +117,15 @@ background-color: #2e2e2e;
 
 }
 
+.recipeResults a {
+
+	font-family: 'Open Sans', bebas, sans-serif;
+
+	font-weight: bold;
+	color: black;
+
+}
+
 
 /*end global styles*/
 
@@ -208,7 +217,7 @@ header img:nth-child(1) {
   font-size: 30px;
 }
 
-#middleNav {
+.middleNav {
 	border-top: 2px solid rgba(255,255,255,.5);
 	border-bottom: 2px solid rgba(255,255,255,.5);
 }
@@ -238,6 +247,7 @@ header img:nth-child(1) {
  
   transition: background .2s ease-out;
     color: white;
+    padding-top: 1.5px;
 
 
 }
@@ -384,40 +394,22 @@ color: white;
 
 }
 
-#footer {
-
-	width: 100%;
-	background-color: #424242;
-	height:  auto;
-}
 
 
-#footer p {
-
-	font-family: bebas, arial, sans-serif;
-	text-align: center;
-	color: white;
-	font-size: 30px;
-
-}
 
 /*recipes*/
 
 #searchBar {
 
 	position: relative;
-	margin-bottom: 10px;
+	margin-top: 10px;
 	padding-top: 10px 20px;
 }
 
 #searchBar input {
-
-	border-top: 2px solid #2e2e2e;
-	border-bottom: 2px solid #2e2e2e;
-	border-left: 0px solid white;
-	border-right: 0px solid white;
-		height: 53px;
-		width: 100%;
+	border: 0px solid white;
+	height: 53px;
+	width: 100%;
 
 }
 
@@ -471,15 +463,20 @@ height: 70px;
 
 	background-color: rgba(255, 255, 255, .5);
 	font-family: bebas;
+	font-size: 20px;
 	margin-top: 100px;
 	padding: 2px 20px;
 	display: inline;
+
 
 }
 
 #ingredientContainer button {
 	display: inline;
 	margin-top: 18px;
+	margin-left: 2%;
+	margin-right: 2%;
+
 }
 
 
@@ -501,28 +498,60 @@ height: 70px;
   position: relative;
   display: block;
   padding: 0 0 0 1em;
-  background: #16a085;
-  font-weight: bold;
-  line-height: 3;
+  background: rgb(216, 83, 0);
+  line-height: 2.2;
   cursor: pointer;
+  font-family: bebas, arial, sans-serif;
+  color: white;
+  font-size: 25px;
 }
 
 .tab-content {
   max-height: 0;
   overflow: hidden;
-  background: #1abc9c;
+  background: #c6c6c6;
   -webkit-transition: max-height .35s;
   -o-transition: max-height .35s;
   transition: max-height .35s;
+
 }
 
-.tab-content p {
+/*checkboxes labels*/
+
+.tab-content label {
+
+
+	font-family: 'Open Sans', bebas, sans-serif;
+	color: black;
+	margin-bottom-bottom: 40px;
+}
+
+
+form hr {
+	
+	border-bottom: 1.5px solid #2e2e2e;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	width: 140%;
+	right: 30px;
+	padding: 3px 3px; 
+	position: relative;
+	
+
+
+}
+
+/*content*/
+
+.tab-content form {
   margin: 1em;
 }
-/* :checked */
+/* :checked, is height of dropdown*/
 .input:checked ~ .tab-content {
-  max-height: 10em;
+  max-height: 14em;
 }
+
+
 /* Icon */
 .label::after {
   position: absolute;
@@ -537,15 +566,128 @@ height: 70px;
   -o-transition: all .35s;
   transition: all .35s;
 }
+
+
+/*triangle*/
+
 .input[type=checkbox] + label::after {
   content: "+";
+  	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 12px solid white;
+	margin-top: 20px;
+	margin-right: 10px;
+
+
 }
 .input[type=radio] + label::after {
   content: "\25BC";
 }
 .input[type=checkbox]:checked + label::after {
-  transform: rotate(315deg);
+  transform: rotate(300deg);
 }
-.input[type=radio]:checked + label::after {
-  transform: rotateX(180deg);
+
+
+.tab-content form input {
+
+	background-color: transparent;
+	border: 1px solid black;
+
+
+}
+
+
+
+form h3 {
+
+	font-family: bebas;
+	font-size: 20px;
+	color: black;
+	padding-bottom: 10px;	
+
+}
+
+
+/*end accordion*/ 
+
+
+
+#sectionheaderMobile {
+
+	text-align: center;
+	font-size: 9vw;
+	padding-top: 5%;
+}
+
+.recipeResults {
+
+	display: flex;
+	 align-items: center;
+ flex-direction: column;
+
+
+}
+
+.recipeResults h3{
+
+font-family: bebas;
+text-align: center;
+font-size: 6vw;
+padding-bottom: 3%;
+color: #d85300 ;
+
+}
+
+.resultsimageContainer {
+
+	width: 280px;
+	height: 140px;
+	overflow: hidden;
+}
+
+.resultsimageContainer img {
+
+	width: 100%;
+}
+
+.recipeResults a {
+
+	
+	padding: 5% 8%;
+
+
+}
+
+section hr {
+
+border-bottom: 1.5px solid #2e2e2e;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	width: 140%;
+	right: 30px;
+	padding: 3px 3px; 
+	position: relative;
+	color: red;
+
+}
+
+
+#footer {
+
+	width: 100%;
+	background-color: #424242;
+	height:  auto;
+}
+
+
+#footer p {
+
+	font-family: bebas, arial, sans-serif;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	line-height: 50px;
+
 }
