@@ -126,6 +126,14 @@ background-color: #2e2e2e;
 
 }
 
+fieldset input, textarea{
+
+border: 1.5px solid black;
+height: 30px;
+margin: 9px 9px;
+	
+}
+
 
 /*end global styles*/
 
@@ -325,7 +333,7 @@ height: 40px;
 
 #heroimageText p, h2 {
 
-	margin-bottom: 8%;
+	margin-bottom: 6%;
 }
 
 #heroimageText h2 {
@@ -602,7 +610,7 @@ form hr {
 
 form h3 {
 
-	font-family: bebas;
+	font-family: bebas, arial, sans-serif;
 	font-size: 20px;
 	color: black;
 	padding-bottom: 10px;	
@@ -632,7 +640,7 @@ form h3 {
 
 .recipeResults h3{
 
-font-family: bebas;
+font-family: bebas, arial, sans-serif;
 text-align: center;
 font-size: 6vw;
 padding-bottom: 3%;
@@ -673,6 +681,85 @@ border-bottom: 1.5px solid #2e2e2e;
 
 }
 
+/*about page*/
+
+#aboutDescription h2{
+
+text-align: center;
+font-size: 7vw;
+margin-top: 6%;
+}
+
+#aboutDescription p {
+
+	text-align: center;
+	padding-left: 4%;
+	padding-right: 4%;
+	line-height: 120%;
+}
+
+#contactContainer {
+
+	color: white;
+	background-color: #2e2e2e;
+	width: 100%;
+	font-family:  Museo-Slab, arial, sans-serif;
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	line-height: 170%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	
+}
+
+#contactContainer a {
+
+	color: white;
+	font-weight: normal;
+}
+
+fieldset legend {
+
+	text-align: center;
+	font-family: bebas, arial, sans-serif;
+	font-size: 30px;
+	margin-bottom: 5%;
+}
+
+fieldset input, textarea{
+
+width: 85%;
+margin-left: 7.5%;
+margin-right: 7.5%;
+
+	
+}
+
+
+textarea {
+
+	height: 90px;
+}
+
+fieldset label {
+
+	margin-left: 7.5%;
+	font-family: 'Open-Sans', arial, sans-serif;
+
+}
+
+fieldset .button {
+
+	width: 85%;
+	margin: 5% 7.5% 5% 7.5%;
+height: 50px;
+letter-spacing: 1.2px;
+font-size: 30px;
+}
+
+
+
 
 #footer {
 
@@ -691,3 +778,4 @@ border-bottom: 1.5px solid #2e2e2e;
 	line-height: 50px;
 
 }
+
