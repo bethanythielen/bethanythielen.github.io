@@ -256,6 +256,7 @@ header img:nth-child(1) {
   transition: background .2s ease-out;
     color: white;
     padding-top: 1.5px;
+    line-height: 110%;
 
 
 }
@@ -779,6 +780,7 @@ cursor: pointer;
 	color: white;
 	font-size: 30px;
 	line-height: 50px;
+	text-decoration: none;
 
 }
 
