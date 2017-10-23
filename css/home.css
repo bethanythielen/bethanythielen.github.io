@@ -695,7 +695,7 @@ margin-top: 6%;
 	text-align: center;
 	padding-left: 4%;
 	padding-right: 4%;
-	line-height: 120%;
+	line-height: 130%;
 }
 
 #contactContainer {
@@ -704,12 +704,14 @@ margin-top: 6%;
 	background-color: #2e2e2e;
 	width: 100%;
 	font-family:  Museo-Slab, arial, sans-serif;
+	font-size: 20px;
 	text-align: center;
 	margin-top: 5%;
 	margin-bottom: 5%;
 	line-height: 170%;
 	padding-top: 5%;
 	padding-bottom: 5%;
+
 	
 }
 
@@ -756,6 +758,7 @@ fieldset .button {
 height: 50px;
 letter-spacing: 1.2px;
 font-size: 30px;
+cursor: pointer;
 }
 
 
