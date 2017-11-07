@@ -19,81 +19,107 @@
 
 					<a href="index.html"><img src="../images/logo.png" alt="Thyme For Dinner Logo"></a>
 
-				  <input class="menu-btn" type="checkbox" id="menu-btn" />
-				  <label class="menu-icon" for="menu-btn"><span class="navicon">Menu</span></label>
+				  <input class="menu-btn hiddenMobile" type="checkbox" id="menu-btn" />
+				  <label class="menu-icon hiddenMobile" for="menu-btn"><span class="navicon">Menu</span></label>
 
-				  <div class="menu">
-				  	<nav>
+				  <div class="menu hiddenMobile">
+				  	<nav >
 				  		<h2 class="hidden">Navigation</h2>
 					  	<ul>
-						    <li> <a id="currentPage" href="index.html">home</a></li>
+						    <li> <a class="currentPage" href="index.html">home</a></li>
 							<li><a class="middleNav" href="recipefinder.html">recipes</a></li>
 							<li><a href="about.html">about</a></li>
 						</ul>
 					</nav>
 				  </div>
-			</div>
 
+
+				  	<!--for desktop-->
+					  <nav class="hiddenDesktop altNav">
+				  		<h2 class="hidden">Navigation</h2>
+					  	<ul>
+						    <li> <a class="currentPage" href="index.html">home</a></li>
+							<li><a href="recipefinder.html">recipes</a></li>
+							<li><a href="about.html">about</a></li>
+						</ul>
+					</nav>
+			</div>
 	
 			</header>
 
 			<main>
 				<section id="topSection">
-					<h2 class="hiddenDesktop">Quick Search</h2>
+					<h2 class="hidden">Quick Search</h2>
 					<div id="heroimageContainer">
 						<div id="heroimageText">
 							<h2>Thyme For Dinner</h2>
-							<p>Enter the ingredients you have on-hand. We'll build a dish around them. </p>
-					
-								<form action="recipefinder.html">
+
+							<div id="searchContainerHome">
+								<p>Enter the ingredients you have on-hand. We'll build a dish around them. </p>
+						
+								<form class="hiddenMobile" action="recipefinder.html">
 									<input class="button" type="submit" value="Find Recipes"/>
 								</form>
 
+				
+								<form class="hiddenDesktop">
+									<input type="search" name="recipesearch" placeholder="Search recipes">
+									<span id="magnifyingGlass" class="fa fa-search"></span>
+								</form>
+							</div>
 
+							<div id="vRule"></div>
+
+
+							<div id="ingredientContainerHome">
+
+								<button class="button hiddenDesktop">&plus;  Add Ingredient</button>
+
+								<div id="ingredientsHome" class="hiddenDesktop">
+									<span class="ingredient hiddenDesktop">&minus; Radishes</span>
+									<span class="ingredient hiddenDesktop">&minus; Mayonaise</span>
+									<span class="ingredient hiddenDesktop">&minus; Eggs</span>
+								</div>
+							</div>
+	
 						</div>
+
 						<img src="../images/heroimage.png" alt="Hero image of cutting board">
 					</div>
 
-					<div class="hiddenDesktop">
-
-						<form>
-							<input type="search" name="recipesearch" placeholder="Search recipes">
-							<span class="fa fa-search"></span>
-						</form>
-
-						<button>&plus; Add Ingredient</button>
-						<span class="ingredient">&minus; Radishes</span>
-						<span class="ingredient">&minus; Mayonaise</span>
-						<span class="ingredient">&minus; Eggs</span>
-					</div>
-					
-
 				</section>
-				<section id="featured">
-				
-					 <h2>Featured Recipes</h2>
 
-					<div class="imgContainer">
-						<img src="../images/featuredshrimp.png" alt="featued image of shrimp">
-						<div class="titleContainer"><h3>Shrimp Scampi</h3></div>
-					</div>
-					<div class="imgContainer">
-						<img src="../images/featuredtaco.png" alt="featued image of fish">
-						<div class="titleContainer"><h3>Fish Tacos</h3></div>
-					</div>
-					<div class="imgContainer">
+				<section>
+					
+					<h2 class="sectionHeader">Featured Recipes</h2>
 
-						<img src="../images/featuredsalmon.png" alt="featued image of salmon">
-						<div class="titleContainer"><h3>Salmon Filet</h3></div>
+					<div id="featured">
+			
+
+						<div class="imgContainer">
+							<img src="../images/featuredshrimp.png" alt="featued image of shrimp">
+							<div class="titleContainer"><h3>Shrimp Scampi</h3></div>
+						</div>
+						<div class="imgContainer">
+							<img src="../images/featuredtaco.png" alt="featued image of fish">
+							<div class="titleContainer"><h3>Fish Tacos</h3></div>
+						</div>
+						<div class="imgContainer">
+
+							<img src="../images/featuredsalmon.png" alt="featued image of salmon">
+							<div class="titleContainer"><h3>Salmon Filet</h3></div>
+						</div>
 					</div>
 				</section>
 			</main>
 			<footer>
 				<div id="footer">
-					<h2 class="hidden">Footer</h2>
-					<p>Call us at 480-245-1357</p>
-					<p class="hiddenDesktop">Email us at support@thymefordinner.com</p>
-					<p class="hiddenDesktop">[For educational purposes only]</p>
+					<div id="footerText">
+						<h2 class="hidden">Footer</h2>
+						<p class="bad">Call us at 480-245-1357</p>
+						<p class="hiddenDesktop">Email us at support@thymefordinner.com</p>
+						<p class="hiddenDesktop">[For educational purposes only]</p>
+					</div>
 				</div>
 			</footer>
 		</div>

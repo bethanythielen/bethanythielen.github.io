@@ -2,7 +2,8 @@
 <html lang="en">
 	<head>
 		<!--Bethany Thielen-->
-		<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	
 		<title>Thyme for Dinner</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,217 +14,301 @@
 	</head> 
 	<body> 
 		<div id="wrapper">
-
 			<header class="header">
 				<div id="headerContent">
 					<h1 class="hidden">Thyme for Dinner Home</h1>
+
 					<a href="index.html"><img src="../images/logo.png" alt="Thyme For Dinner Logo"></a>
 
-				  <input class="menu-btn" type="checkbox" id="menu-btn" />
-				  <label class="menu-icon" for="menu-btn"><span class="navicon">Menu</span></label>
+				  <input class="menu-btn hiddenMobile" type="checkbox" id="menu-btn" />
+				  <label class="menu-icon hiddenMobile" for="menu-btn"><span class="navicon">Menu</span></label>
 
-				  <div class="menu">
-				  	<nav>
+				  <div class="menu hiddenMobile">
+				  	<nav >
 				  		<h2 class="hidden">Navigation</h2>
 					  	<ul>
-						    <li> <a href="index.html">home</a></li>
-							<li><a id="currentPage"  class="middleNav" href="recipefinder.html">recipes</a></li>
+						    <li> <a  href="index.html">home</a></li>
+							<li><a class="middleNav currentPage" href="recipefinder.html">recipes</a></li>
 							<li><a href="about.html">about</a></li>
 						</ul>
 					</nav>
 				  </div>
-			</div>
 
+
+				  	<!--for desktop-->
+				  <nav class="hiddenDesktop altNav">
+				  		<h2 class="hidden">Navigation</h2>
+					  	<ul>
+						    <li> <a  href="index.html">home</a></li>
+							<li><a class="currentPage" href="recipefinder.html">recipes</a></li>
+							<li><a href="about.html">about</a></li>
+						</ul>
+					</nav>
+			</div>
+	
 			</header>
 			<main>
 
 				<section>
-					<h2 class="hiddenDesktop">Recipe Finder</h2>
+					<h2 class="hiddenDesktopText">Recipe Finder</h2>
 					<div id="recipeBar">
-						<button class="hiddenDesktop" class="button">&plus; Add Ingredient</button>
+		
 						<form>
-							<div id="searchBar">
+							<div class="hiddenMobile searchBar">
 								<input type="search" name="recipesearch" placeholder="Enter keywords to find recipes">
-								<span id="magnifyingGlass" class="fa fa-search"></span>
+								<span class="fa fa-search"></span>
 							</div>
-
-							<select class="hiddenDesktop">
-							  <option id="15">&#60; 15 mins</option>
-							  <option id="30">&#60; 30 mins</option>
-							  <option id="45">&#60;</option>
-							  <option id="none">No limit</option>
-							</select>
 						</form>
+					</div>
 
 						
 						<div id="ingredientContainer">
+							<div class="hiddenDesktop searchBar">
+								<input type="search" name="recipesearch" placeholder="Enter keywords to find recipes">
+								<span id="magnifyingGlass" class="fa fa-search"></span>
+							</div>
 							<button class="button">&plus; Add Ingredient</button>
-							<span class="ingredient">Radishes &minus; </span>
-							<span class="ingredient">Mayonaise &minus;</span>
-							<span class="ingredient">Eggs &minus; </span>
+
+							<div id="prepTime">
+
+								<label class="hiddenDesktop hiddenTablet" for="time">Prep time (optional)</label>
+								<select name="time" class="hiddenDesktop hiddenTablet">
+								  <option id="15">&#60; 15 mins</option>
+								  <option id="30">&#60; 30 mins</option>
+		
+								  <option id="none">No limit</option>
+								</select>
+							</div>
+
+					<hr>
+
+							<div id="ingredientContainerRecipes">
+								<span class="ingredient">Radishes &minus; </span>
+								<span class="ingredient">Mayonaise &minus;</span>
+								<span class="ingredient">Eggs &minus;</span>
 						</div>
 
 					</div>
 				</section>
-				<aside>
-					<h2 class="hiddenDesktop">Filter Results</h2>
-					<p class="hiddenDesktop">clear filters</p>
 
+				<div id="lowercontentWrapper">
 
-					<!--accordion-->
-
-
-					<div class="tab">
-				      <input class="input" id="tab-one" type="checkbox" name="tabs">
-				      <label class="label" for="tab-one">Filter Results</label>
-				      <div class="tab-content">
-
-				        <form>
-
-				       
-
-				        	<h3>Allergies</h3>
-
-						 	<input type="checkbox" name="soy" id="soy">
-						    <label for="soy">Soy</label>
-
-						    <input type="checkbox" name="wheat" id="wheat">
-						    <label for="wheat">Wheat</label>
-
-						   	  
-						    <input type="checkbox" name="dairy" id="dairy">
-						    <label for="dairy">Dairy</label>
-						  
-						    <input type="checkbox" name="treenuts" id="treenuts">
-						    <label for="treenuts">Tree nuts</label>
-
-						    <hr>
-
-						    <h3>Diet</h3>
-
-						    <input type="checkbox" name="sugar" id="sugar">
-						    <label for="sugar">Low Sugar</label>
-
-						    <input type="checkbox" name="carb" id="carb">
-						    <label for="carb">Low Carb</label>
-
-						    <input type="checkbox" name="fat" id="fat">
-						    <label for="fat">Low Fat</label>
-
-				
-						
-						</form>
-	 				 </div>
-					</div>
-				</aside>
-
-
-
-					<!--
-
-
-					<button class="accordion">Allergies</button>
-					<div class="panel">
-						<form>
-						 	<input type="checkbox" name="soy" id="soy">
-						    <label for="soy">Soy</label>
-
-						    <input type="checkbox" name="wheat" id="wheat">
-						    <label for="wheat">Wheat</label>
-
-						   	  <label for="dairy">Dairy</label>
-						    <input type="checkbox" name="dairy" id="dairy">
-						  
-
-						    <input type="checkbox" name="treenuts" id="treenuts">
-						    <label for="treenuts">Tree nuts</label>
-						</form>
-					</div>
-
-					<button class="accordion">Nutrition</button>
-					<div class="panel">
-						<form>
-						 	<input type="checkbox" name="sugar" id="sugar">
-						    <label for="sugar">Low Sugar</label>
-
-						    <input type="checkbox" name="carb" id="carb">
-						    <label for="carb">Low Carb</label>
-
-						    <input type="checkbox" name="fat" id="fat">
-						    <label for="fat">Low Fat</label>
-
-						    <input type="checkbox" name="fiber" id="fiber">
-						    <label for="fiber">High Fiber</label>
-						</form>
-					</div>
-
-					<button class="accordion">Diet</button>
-					<div class="panel">
-						<form>
-						 	<input type="checkbox" name="ketogenic" id="ketogenic">
-						    <label for="ketogenic">Ketogenic</label>
-
-						    <input type="checkbox" name="atkins" id="atkins">
-						    <label for="atkins">Atkins</label>
-
-						    <input type="checkbox" name="whole30" id="whole30">
-						    <label for="whole30">Whole 30</label>
-						</form>
-					</div>
-
-					<button class="accordion">Recipe Source</button>
-					<div class="panel">
-						<form>
-						 	<input type="checkbox" name="allrecipes" id="allrecipes">
-						    <label for="allrecipes">Allrecipes</label>
-
-						    <input type="checkbox" name="delish" id="delish">
-						    <label for="delish">Delish</label>
-						</form>
-					</div>
-				</aside> -->
-
-				<section>
-
-					<h2 id="sectionheaderMobile"> Search Results:</h2>
-					<div class="recipeResults">
-						<h3>Radish Egg Sandwich</h3>
-						<div class="resultsimageContainer">
-							<img src="../images/sandwich.png" alt="sandwich">
+					<aside>
+						<div id="accordionHeader">
+							 <h2 class="hiddenDesktop showinTablet">Filter Results</h2>
+							<p class="hiddenDesktop showinTablet">clear filters</p>
 						</div>
-						<p class="hiddenDesktop">The radishes bring a crisp, peppery crunch. We layered ours on bread with sprouts to make a gooey, satisfyingly messy sandwich. </p>
-						<a href="https://www.acouplecooks.com/radish-and-egg-salad-sandwiches-in-our-kitchen/" target="_blank">View recipe on Delish</a>
-					</div>
+
+
+						<!--accordion-->
+
+						<div class="tab hiddenMobile">
+
+
+
+					      <input class="input" id="tab-one" type="checkbox" name="tabs">
+					      <label class="label" for="tab-one">Filter Results</label>
+					      <div class="tab-content">
+
+					        <form>
+
+					        	<h3>Allergies</h3>
+
+							 	<input type="checkbox" name="soy" id="soy">
+							    <label for="soy">Soy</label>
+
+							    <input type="checkbox" name="wheat" id="wheat">
+							    <label for="wheat">Wheat</label>
+
+							   	  
+							    <input type="checkbox" name="dairy" id="dairy">
+							    <label for="dairy">Dairy</label>
+							  
+							    <input type="checkbox" name="treenuts" id="treenuts">
+							    <label for="treenuts">Tree nuts</label>
+
+							    <hr>
+
+							    <h3>Restrictions</h3>
+
+							    <input type="checkbox" name="sugar" id="sugar">
+							    <label for="sugar">Low Sugar</label>
+
+							    <input type="checkbox" name="carb" id="carb">
+							    <label for="carb">Low Carb</label>
+
+							    <input type="checkbox" name="fat" id="fat">
+							    <label for="fat">Low Fat</label>
+
+							    <hr>
+
+							    <h3>Diet</h3>
+							    <input type="checkbox" name="ketogenic" id="ketogenic">
+							    <label for="ketogenic">Ketogenic</label>
+
+							    <input type="checkbox" name="atkins" id="atkins">
+							    <label for="atkins">Atkins</label>
+
+							    <input type="checkbox" name="whole30" id="whole30">
+							    <label for="whole30">Whole 30</label>
+
+							    <hr>
+
+							    <h3>Recipe Source</h3>
+
+							    	<input type="checkbox" name="allrecipes" id="allrecipes">
+							    <label for="allrecipes">Allrecipes</label>
+
+							    <input type="checkbox" name="delish" id="delish">
+							    <label for="delish">Delish</label>
+							
+							</form>
+		 				 </div>
+						</div>
+
+						<div id="tabContainer">
+							<h2 class="hiddenDesktop hiddenTablet">Filter Results</h2>
+							<p class="hiddenTablet hiddenDesktop">clear filters</p>
+		
+							<div class="tab hiddenDesktop">
+							      <input class="input" id="tab-two" type="checkbox" name="tabs">
+							      <label class="label" for="tab-two">Allergies</label>
+							      <div class="tab-content">
+
+							        <form>
+										<input type="checkbox" name="soy" id="soy">
+									    <label for="soy">Soy</label>
+
+									    <input type="checkbox" name="wheat" id="wheat">
+									    <label for="wheat">Wheat</label>
+
+									   	  
+									    <input type="checkbox" name="dairy" id="dairy">
+									    <label for="dairy">Dairy</label>
+									  
+									    <input type="checkbox" name="treenuts" id="treenuts">
+									    <label for="treenuts">Tree nuts</label>
+									</form>
+				 				 </div>
+								</div><!--
+								--><div class="tab hiddenDesktop">
+							      <input class="input" id="tab-three" type="checkbox" name="tabs">
+							      <label class="label" for="tab-three">Restrictions</label>
+							      <div class="tab-content">
+
+							        <form>
+									 	 	<input type="checkbox" name="sugar" id="sugar">
+								    <label for="sugar">Low Sugar</label>
+
+								    <input type="checkbox" name="carb" id="carb">
+								    <label for="carb">Low Carb</label>
+
+								    <input type="checkbox" name="fat" id="fat">
+								    <label for="fat">Low Fat</label>
+									</form>
+				 				 </div>
+								</div><!--
+								--><div class="tab hiddenDesktop">
+							      <input class="input" id="tab-four" type="checkbox" name="tabs">
+							      <label class="label" for="tab-four">Diets</label>
+							      <div class="tab-content">
+
+							        <form>
+										 <input type="checkbox" name="ketogenic" id="ketogenic">
+									    <label for="ketogenic">Ketogenic</label>
+
+									    <input type="checkbox" name="atkins" id="atkins">
+									    <label for="atkins">Atkins</label>
+
+									    <input type="checkbox" name="whole30" id="whole30">
+									    <label for="whole30">Whole 30</label>
+									</form>
+				 				 </div>
+								</div><!--
+							--><div class="tab hiddenDesktop">
+							      <input class="input" id="tab-five" type="checkbox" name="tabs">
+							      <label class="label" for="tab-five">Recipe Source</label>
+							      <div class="tab-content">
+
+							        <form>
+									  <input type="checkbox" name="allrecipes" id="allrecipes">
+								    <label for="allrecipes">Allrecipes</label>
+
+								    <input type="checkbox" name="delish" id="delish">
+								    <label for="delish">Delish</label>
+									</form>
+				 				 </div>
+								</div>
+							</div>
+					</aside>
+
+					<section id="searchResults">
+		
+							<h2 class="hiddenDesktop" id="sectionheaderMobile"> Search Results:</h2>
+
+							<div id="resultstopWrapper">
+
+							<label class="hiddenDesktop for="sortBy">Sort by:</label>
+							<select name="sortBy" class="hiddenDesktop sortBy">
+							  <option id="15">Relevance</option>
+							  <option id="30">Prep Time </option>
+							  <option id="none">Newly Added</option>
+							</select>
+						</div>
+
+						<div id="allrecipeResults">
+
+							<div class="recipeResults">
+								<h3>Radish Egg Sandwich</h3>
+								<div class="resultsimageContainer">
+									<img src="../images/sandwich.png" alt="sandwich">
+								</div>
+								<div class="recipetextContainer">
+									<p class="hiddenDesktop">The radishes bring a crisp, peppery crunch. We layered ours on bread with sprouts to make a gooey, satisfyingly messy sandwich. </p>
+									<a href="https://www.acouplecooks.com/radish-and-egg-salad-sandwiches-in-our-kitchen/" target="_blank">View recipe on Delish</a>
+								</div>
+							</div>
+					
+							<div class="recipeResults">
+								<h3>Vegetable Skillet</h3>
+								<div class="resultsimageContainer">
+									<img src="../images/skillet.png" alt="vegetable skillet">
+								</div>
+								<div class="recipetextContainer">
+									<p class="hiddenDesktop"> All the vegetables in your fridge that you didn’t know what to do with. Savory, roasted flavor that's guilt-free. The perfect meal for any time of the day. </p>
+									<a href="http://allrecipes.com/recipe/25431/outdoor-vegetable-skillet/" target="_blank"> View recipe on Allrecipes</a>
+								</div>
+							</div>
+
+							<div class="recipeResults">
+								<h3>Burrito Bowl</h3>
+								<div class="resultsimageContainer">
+									<img src="../images/burritobowl.png" alt="buritto bowl">
+								</div>
+								<div class="recipetextContainer">
+									<p class="hiddenDesktop"> It’s a burrito....in a bowl. A hodge podge of goodness just waiting to be devoured. It can be made as fancy or as simple as you want</p>
+									<a href="http://www.delish.com/cooking/recipe-ideas/recipes/a51578/loaded-burrito-bowls-recipe/" target="_blank">View recipe on Delish</a>
+								</div>
+							</div>
+						</div>
+						<p id="end">End results</p>
+						<hr>
+
+					</section>
+				</div>
+
 			
-					<div class="recipeResults">
-						<h3>Vegetable Skillet</h3>
-						<div class="resultsimageContainer">
-							<img src="../images/skillet.png" alt="vegetable skillet">
-						</div>
-						<p class="hiddenDesktop"> All the vegetables in your fridge that you didn’t know what to do with. The perfect meal for any time of the day. </p>
-						<a href="http://allrecipes.com/recipe/25431/outdoor-vegetable-skillet/" target="_blank"> View recipe on Allrecipes</a>
-					</div>
 
-					<div class="recipeResults">
-						<h3>Burrito Bowl</h3>
-						<div class="resultsimageContainer">
-							<img src="../images/burritobowl.png" alt="buritto bowl">
-						</div>
-						<p class="hiddenDesktop"> It’s a burrito....in a bowl. A hodge podge of goodness just waiting to be devoured. It can be made as fancy or as simple as you want, to meet your meal time needs</p>
-						<a href="http://www.delish.com/cooking/recipe-ideas/recipes/a51578/loaded-burrito-bowls-recipe/" target="_blank">View recipe on Delish</a>
-					</div>
-				</section>
-
-				<span id="end" class="hiddenDesktop">End results</span>
-				<hr>
 
 			</main>
 			<footer>
-				<div id="footer">
+				<div id="footer">0
+					<div id="footerText">
 					<h2 class="hidden">Footer</h2>
-					<p>Call us at 480-245-1357</p>
-					<p class="hiddenDesktop">Email us at support@thymefordinner.com</p>
-					<p class="hiddenDesktop">[For educational purposes only]</p>
+						<p class="bad">Call us at 480-245-1357</p>
+						<p class="hiddenDesktop">Email us at support@thymefordinner.com</p>
+						<p class="hiddenDesktop">[For educational purposes only]</p>
+						</div>
 				</div>
 			</footer>
 		</div>

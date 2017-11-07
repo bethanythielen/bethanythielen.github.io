@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<!--Bethany Thielen-->
-		<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 		<title>Thyme for Dinner</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,37 +13,57 @@
 	</head> 
 	<body> 
 		<div id="wrapper">
-
 			<header class="header">
 				<div id="headerContent">
 					<h1 class="hidden">Thyme for Dinner Home</h1>
+
 					<a href="index.html"><img src="../images/logo.png" alt="Thyme For Dinner Logo"></a>
 
-				  <input class="menu-btn" type="checkbox" id="menu-btn" />
-				  <label class="menu-icon" for="menu-btn"><span class="navicon">Menu</span></label>
+				  <input class="menu-btn hiddenMobile" type="checkbox" id="menu-btn" />
+				  <label class="menu-icon hiddenMobile" for="menu-btn"><span class="navicon">Menu</span></label>
 
-				  <div class="menu">
-				  	<nav>
+				  <div class="menu hiddenMobile">
+				  	<nav >
 				  		<h2 class="hidden">Navigation</h2>
 					  	<ul>
 						    <li> <a href="index.html">home</a></li>
-							<li><a  class="middleNav" href="recipefinder.html">recipes</a></li>
-							<li><a id="currentPage" href="about.html">about</a></li>
+							<li><a class="middleNav" href="recipefinder.html">recipes</a></li>
+							<li><a  class="currentPage" href="about.html">about</a></li>
 						</ul>
 					</nav>
 				  </div>
-			</div>
 
+
+				  	<!--for desktop-->
+				  <nav class="hiddenDesktop altNav">
+				  		<h2 class="hidden">Navigation</h2>
+					  	<ul>
+						    <li> <a  href="index.html">home</a></li>
+							<li><a href="recipefinder.html">recipes</a></li>
+							<li><a  class="currentPage" href="about.html">about</a></li>
+						</ul>
+					</nav>
+			</div>
+	
 			</header>
 			<main>
-				<section class="hiddenDesktop">
-					<h2>Passionate Folks</h2>
-					<h2>Who Love Food</h2>
+				<section class="hiddenDesktop aboutHeader">
+
+				<div id="abouttextContainer">
+					<div id="topText" class="textHighlight">
+						<h2 >Passionate Folks</h2>
+					</div>
+					<div  id="bottomText" class="textHighlight">
+						<h2 >Who Love Food</h2>
+					</div>
+				</div>
 					<img src="../images/aboutgirl.png" alt="smiling cook stock image">
+			
+
 				</section>
 
 				<section id="aboutDescription">
-					<h2>About Our Team</h2>
+					<h2 class="hiddenMobile">About Our Team</h2>
 					<p>We are a team of college students who know the struggles of meal planning and the boring meal choices that become defaults to make after a long day. We seek to better the lives of budget minded people through better meal planning and exploring new meal options.</p>
 				</section>
 				<section id="contactContainer">
@@ -58,14 +78,21 @@
 					<fieldset>
 
 						<legend>Or <br>fill out our contact form</legend>
+
+						<div id="smallFields">
 				    
-				        <label for="name">First and last name:</label>
-				        <input type="text" id="name" name="name">
+					        <label for="name">First and last name:</label>
+					        <input type="text" id="name" name="name">
 
-				        <label for="mail">E-mail:</label>
-				        <input type="email" id="mail" name="mail">
+					        <label for="mail">E-mail:</label>
+					        <input type="email" id="mail" name="mail">
 
-				        <label for="message">Message:</label>
+					        <label for="mail">Reason for Contact:</label>
+					        <input type="text" id="reason" name="reason">
+
+					    </div>
+
+				        <label id="textareaLabel" for="message">Message:</label>
 				        <textarea id="message" name="message"></textarea>
 
 				        <button class="button" type="submit" value="submit">Submit</button>
@@ -77,10 +104,12 @@
 			</main>
 			<footer>
 				<div id="footer">
+					<div id="footerText">
 					<h2 class="hidden">Footer</h2>
-					<p>Call us at 480-245-1357</p>
-					<p class="hiddenDesktop">Email us at support@thymefordinner.com</p>
-					<p class="hiddenDesktop">[For educational purposes only]</p>
+						<p class="bad">Call us at 480-245-1357</p>
+						<p class="hiddenDesktop">Email us at support@thymefordinner.com</p>
+						<p class="hiddenDesktop">[For educational purposes only]</p>
+					</div>
 				</div>
 			</footer>
 		</div>

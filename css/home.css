@@ -64,6 +64,7 @@ table {
 
 /*global styles*/
 
+
 header, section {
 
 	margin-bottom: -2px;
@@ -84,7 +85,12 @@ font-family: 'Open Sans', arial, sans-serif;
 
 }
 
+li a {
+  text-decoration: none;
+  color: white;
+  font-family: bebas, arial, sans-serif;
 
+}
 
 .button  {
 
@@ -152,6 +158,12 @@ margin: 9px 9px;
 	display: none;
 }
 
+.hiddenDesktopText {
+	font-size: 0;
+}
+
+
+
 header img:nth-child(1) {
 	
 	width: 55px;
@@ -164,8 +176,6 @@ header img:nth-child(1) {
 .header {
 	width: 100%;
 	overflow: hidden;
-
-
 	
 }
 
@@ -179,7 +189,7 @@ header img:nth-child(1) {
 
 #heroimageContainer img{
 	
-	width: 700px;
+	width: 768px;
 	position: relative;
 	left: 100%;
 	margin-left: -200%;	
@@ -206,23 +216,29 @@ header img:nth-child(1) {
   z-index: 3;
 }
 
-.header ul {
+.menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  overflow: hidden;
+  overflow: visible;
   background-color: #424242;
 }
 
-.header li a {
+.menu li a {
   display: block;
   padding: 20px 20px;
-
   text-decoration: none;
   color: white;
   font-family: bebas, arial, sans-serif;
   text-align: center;
   font-size: 30px;
+}
+
+.header li{
+
+  display: block;
+  padding: 2px;
+
 }
 
 .middleNav {
@@ -275,9 +291,9 @@ header img:nth-child(1) {
       border: 1px solid white;
 }
 
-#currentPage {
+.currentPage {
 
-	color: #d85300;
+	color: #d85300!important;
 }
 
 
@@ -329,18 +345,11 @@ height: 40px;
 
 }
 
-
-
-
-#heroimageText p, h2 {
-
-	margin-bottom: 6%;
-}
-
 #heroimageText h2 {
 
-	font-size: 34px;
+	font-size: 2em;
 	padding: 0 5px 0 5px;
+	margin-bottom: 6%;
 
 }
 
@@ -348,6 +357,17 @@ height: 40px;
 	line-height: 31px;
 	font-size: 20px;
 	padding: 0 30px 0 30px;
+	width: 55%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 6%;
+}
+
+.sectionHeader {
+	margin: 3% 3%;
+	font-size:  2em;
+	text-align: center;
+
 }
 
 /* featured */ 
@@ -361,7 +381,12 @@ height: 40px;
 
 #featured {
 
-
+-webkit-column-count: 1;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    1;
+  -moz-column-gap:      0px;
+  column-count:         1;
+  column-gap:           0px; 
 }
 
 .imgContainer {
@@ -381,8 +406,6 @@ height: 40px;
 	width: 100%;
 }
 
-
-}
 
 .imgContainer img {
 
@@ -415,39 +438,29 @@ color: white;
 }
 
 
-
-
 /*recipes*/
 
-#searchBar {
+.searchBar {
 
 	position: relative;
-	margin-top: 10px;
-	padding: 10px 20px;
+	margin-top: 6px;
+	padding: 5px 20px;
 }
 
-#searchBar input {
+.searchBar input {
 	border: 0px solid white;
 	height: 53px;
 	width: 100%;
 
 }
 
-#magnifyingGlass {
-	display: inline;
-	font-size: 27px;
-	position: absolute;
-	left: 90%;
-	top: 12px;
-	color: #2e2e2e;
-}
+
 
 input::placeholder {
 
 font-family: bebas;
 padding-left: 3px;
 font-size: 20px;
-margin-top: 9px;
 line-height: 32px;
 height: 30px;
 }
@@ -475,6 +488,12 @@ height: 70px;
 
 }
 
+
+#ingredientContainerRecipes {
+
+	display: inline;
+}
+
 #ingredientContainer::-webkit-scrollbar { 
     display: none;  
 }
@@ -500,11 +519,12 @@ height: 70px;
 }
 
 
+/* Accordion styles */
 
-/* Acordion styles */
+
 .tab {
   position: relative;
-  margin-bottom: 1px;
+  margin-bottom: 10px;
   width: 100%;
   color: #fff;
   overflow: hidden;
@@ -539,7 +559,6 @@ height: 70px;
 /*checkboxes labels*/
 
 .tab-content label {
-
 
 	font-family: 'Open Sans', bebas, sans-serif;
 	color: black;
@@ -639,6 +658,7 @@ form h3 {
 	text-align: center;
 	font-size: 9vw;
 	padding-top: 5%;
+
 }
 
 
@@ -791,4 +811,1415 @@ cursor: pointer;
 	text-decoration: none;
 
 }
+
+
+@media screen and (max-width: 400px) {
+
+#heroimageText p {
+
+	width: 75%;
+	
+
+}
+
+}
+
+@media screen and (min-width: 768px) {
+
+#heroimageContainer img {
+
+	width: 100%;
+
+}
+.menu-icon {
+
+	display: none;
+}
+
+
+.header {
+  width: 100%;
+  z-index: 3;
+
+}
+
+.header {
+	width: 100%;
+	overflow: hidden;
+	
+}
+
+#headerContent {
+
+	background-image: url("../images/headerimage.png");
+	height: 70px;
+	}
+
+ .currentPage {
+
+	color: white!important;
+	text-decoration: underline!important;
+	
+
+}
+
+.altNav li{
+
+  display: inline;
+
+}
+
+.altNav {
+
+	float: right;
+	margin-top: 20px;
+
+}
+
+
+.altNav a {
+	
+	text-decoration: none;
+	  padding: 20px;
+	  font-size: 30px;
+
+
+}
+
+ .header li a:visited {
+	color: white;
+}
+
+#heroimageText h2 {
+
+	font-size: 8vw;
+
+	margin-bottom: 0px;
+}
+
+#heroimageText p {
+
+	margin-top: 0px;
+}
+
+
+.hiddenDesktop {
+
+	display: initial;
+}
+
+
+#hiddenDesktop {
+
+	display: inline;
+	margin: 0;
+	padding: 0;
+	width: 20px;
+	border: 2px solid red;
+}
+
+
+.hiddenTablet {
+
+	display: none;
+}
+
+	
+#heroimageText input {
+
+	height: 35px;
+	float: left;
+}
+
+.imgContainer {
+
+	position: relative;
+	width: 270px; 
+	height: 140px;
+	overflow: visible;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+.titleContainer {
+
+	width: auto;
+	height: 30px;
+	background-color: rgba(0,0,0,0.4);
+	position: relative;
+	z-index: 6;
+	bottom: 120%;
+}
+
+#featured {
+
+-webkit-column-count: 3;
+  -webkit-column-gap:   5px;
+  -moz-column-count:    3;
+  -moz-column-gap:      5px;
+  column-count:         3;
+  column-gap:           5px; 
+
+ 
+}
+
+
+.hiddenDesktopText {
+
+	text-align: center;
+	margin: 3% 3%;
+	font-size: 4em!important;
+}
+
+
+
+.sectionHeader {
+	margin: 3% 3%;
+	font-size: 8vw;
+	text-align: center;
+
+}
+
+#ingredientsHome .ingredient {
+
+	background-color: rgba(255,255,255,.5);
+	border: 1px solid rgb(46,46,46);
+	margin: 0px;
+	padding: 2px;
+	display: block;
+	width: 100px;
+	margin-top: 17px;
+	
+}
+
+
+
+#vRule {
+
+	border-bottom: 1.5px solid transparent;
+	border-top: 1px solid transparent;
+	border-left: 1.5px solid black;
+	border-right: 1px solid transparent;
+	width: 20px;
+	color: black;
+	height: 175px;
+	position: absolute;
+	left: 50%;
+	
+}
+
+#ingredientContainerHome {
+
+	float: right;
+	margin-right: 16%;
+}
+
+#searchContainerHome {
+	
+	width: 250px;
+	margin: 0px;
+	float: left;
+	margin-left: 22%;
+}
+
+#searchContainerHome input{
+
+	width: 200px;
+	z-index: 0;
+	display: block;
+	margin-bottom: 10px;
+	border: 1px solid black;
+
+}
+
+/*the searchbar*/
+
+#heroimageText input {
+
+	float: none;
+	width: 200px;
+	z-index: 0;
+	display: block;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	background-color: rgba(255,255,255,.5);
+	
+}
+
+input::placeholder {
+
+font-family: bebas;
+padding-left: 3px;
+font-size: 20px;
+line-height: 39px;
+height: 30px;
+color: black;
+margin-top: 10px;
+
+}
+
+
+#heroimageText p{
+
+	z-index: 0;
+	margin-left: 0;
+	margin-right: 0;
+	width: 200px;
+	text-align: left;
+	top: 0;
+	display: block;
+	padding: 0;
+	
+}
+
+
+#heroimageText h2 {
+	margin-bottom: 3%;
+	
+}
+
+
+/*RECIPE FINDER*/ 
+
+
+/*container of ingredients, search and button*/
+
+
+
+#ingredientContainer {
+
+background-color: #565656;
+height: 140px;
+	width: 100%;
+	white-space: initial;
+	overflow-y: initial;
+	overflow-x: initial;
+	-webkit-overflow-scrolling: initial;
+	-ms-overflow-style: initial; 
+   -moz-scrollbars: initial;
+    
+
+}
+
+/*the border on this makes the magnifying glass behave no idea */
+
+.searchBar {
+
+	position: relative;
+	margin-top: 0px;
+	padding: 0px;
+	width: 800px;
+	border: .1px solid black;
+
+}
+
+.searchBar input {
+	position: relative;
+	border: 1px solid black;
+	height: 40px;
+	background-color: rgba(255,255,255,.5);
+	width: 70%;
+	float: right;
+	margin-right: 5%;
+	margin-top: 15px;
+
+}
+
+
+input::placeholder {
+
+font-family: bebas;
+padding-left: 3px;
+font-size: 20px;
+line-height: 32px;
+height: 30px;
+}
+
+
+#ingredientContainer button {
+	display: inline;
+	float: left;
+	margin-top: 18px;
+	margin-left: 2%;
+	margin-right: 2%;
+	width: 20%;
+
+}
+
+#ingredientContainerRecipes {
+
+	display: block;
+	padding-top: 17px;
+	padding-left: 20px;
+}
+
+#ingredientContainer hr {
+
+	border-bottom: 1.5px solid white;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	position: relative;
+	width: 95%;
+	display: block;
+	padding-top: 13px;
+	left: 1px;
+	right: 10px;
+	
+}
+
+#accordionHeader {
+
+
+}
+
+#accordionHeader h2 {
+
+	text-align: center; 
+	font-size: 25px;
+	display: block;
+	margin-top: 3%;
+	font-family: bebas;
+
+
+}
+
+#accordionHeader p {
+
+	text-align: center;
+	display: block;
+	text-decoration: underline;
+	margin-bottom: 2%;
+}
+
+
+
+/* Accordion styles */
+
+#tabContainer {
+
+
+	height: 100px;
+	
+}
+
+.tab:nth-child(-n+5) {
+
+border-right: 2px solid white;
+
+}
+
+.tab {
+
+	float: left;
+	margin-bottom: 15px;
+  position: relative;
+  margin-bottom: 1px;
+  width: calc(25% - 2px);
+  color: #fff;
+  overflow: hidden;
+  display: inline-block;
+
+}
+.input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: rgb(216, 83, 0);
+  line-height: 2.2;
+  cursor: pointer;
+  font-family: bebas, arial, sans-serif;
+  color: white;
+  font-size: 25px;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #c6c6c6;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+
+}
+
+/*checkboxes labels*/
+
+.tab-content label {
+
+	font-family: 'Open Sans', bebas, sans-serif;
+	color: black;
+	margin-bottom: 40px;
+
+}
+
+
+form hr {
+	
+	border-bottom: 1.5px solid #2e2e2e;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	width: 140%;
+	right: 30px;
+	padding: 3px 3px; 
+	position: relative;
+
+
+
+}
+
+/*content*/
+
+.tab-content form {
+  margin: 1em;
+}
+/* :checked, is height of dropdown*/
+.input:checked ~ .tab-content {
+  max-height: 14em;
+}
+
+
+/* Icon */
+.label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 2em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+
+
+form h3 {
+
+	font-family: bebas, arial, sans-serif;
+	font-size: 20px;
+	color: black;
+	padding-bottom: 10px;	
+
+}
+
+/*end accordion*/
+
+
+#resultstopWrapper {
+
+	float: right;
+	display: inline;
+	position: absolute;
+	left: 80%;
+	
+}
+
+#searchResults {
+
+	position: relative;
+}
+
+#searchResults label {
+
+
+	display: block;
+	padding-bottom: 5px;
+	font-family: 'Open Sans', bebas, sans-serif;
+
+}
+
+#searchResults select {
+
+	
+	display: block;
+	font-family: 'Open Sans', bebas, sans-serif;
+
+}
+
+
+#searchResults h2 {
+
+	text-align: left;
+	font-size: 9vw;
+	margin-top: 9%;
+	padding-bottom: 3%;
+	font-family: bebas;
+	font-size: 2em;
+	margin-left: 10%;
+
+}
+
+/*the results section */
+
+.recipeResults {
+margin-bottom: 10px;
+margin-top: 50px;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.recipeResults h3{
+
+font-family: bebas, arial, sans-serif;
+text-align: left;
+font-size: 2em;
+padding-bottom: 3%;
+color: #d85300 ;
+margin-top: 10px;
+
+}
+
+.resultsimageContainer {
+
+	width: 130px; 
+	height: 130px;
+	overflow: hidden;
+	display: inline-block;
+	margin-left: 0;
+	margin-right: auto;
+
+	
+}
+
+.resultsimageContainer img {
+
+	width: 100%;
+
+}
+
+.recipetextContainer {
+
+	display: inline-block;
+	width: 405px;
+	margin-left: 1%;
+
+}
+
+.recipeResults p {
+
+	display: block;
+	line-height: 25px;
+	font-size: 18px;
+}
+
+.recipeResults a {
+
+	margin-top: 12%;
+	margin-bottom: 0;
+	text-align: left;
+
+
+}
+
+section hr {
+
+border-bottom: 1.5px solid #2e2e2e;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	width: 140%;
+	right: 30px;
+	padding: 3px 3px; 
+	position: relative;
+	color: red;
+
+}
+
+
+.recipeResults a {
+
+	font-family: 'Open Sans', bebas, sans-serif;
+
+	font-weight: bold;
+	color: black;
+
+}
+
+#searchResults hr{
+
+border-bottom: 1.5px solid #2e2e2e;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	width: 80%;
+	right: 30px;
+	padding: 3px 3px; 
+	position: relative;
+	padding: 0;
+
+}
+
+#allrecipeResults {
+
+	margin-bottom: 30px;
+}
+
+
+#end {
+
+	text-align: center;
+	margin-top: 15px;
+
+}
+
+
+/*ABOUT PAGE*/
+
+.aboutHeader img {
+
+	width: 100%;
+
+
+} 
+
+#abouttextContainer {
+	position: absolute;
+	top: 150px;
+	width: 600px;
+	
+}
+
+.textHighlight h2 {
+
+	font-size: 3.5em;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+#bottomText {
+
+	margin-left: 80px;
+	width: 78%;
+}
+
+#topText {
+
+	width: 82%;
+}
+
+.textHighlight {
+
+	background-color: white;
+
+}
+
+#aboutDescription p {
+
+	margin-top: 5%;
+	font-size: 1.2em;
+	line-height: 38px;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+#contactContainer p {
+
+	font-size: 6vw;
+	padding-bottom: 50px;
+}
+
+#contactContainer a {
+	padding-top: 50px;
+	font-size: 5vw;
+}
+
+
+fieldset legend {
+
+	text-align: center;
+	font-family: bebas, arial, sans-serif;
+	font-size: 30px;
+	margin-bottom: 5%;
+}
+
+fieldset input, textarea{
+
+width: 85%;
+margin-left: 7.5%;
+margin-right: 7.5%;
+
+	
+}
+
+
+textarea {
+
+	height: 90px;
+}
+
+fieldset label {
+
+	margin-left: 7.5%;
+	font-family: 'Open-Sans', arial, sans-serif;
+
+}
+
+fieldset .button {
+
+	width: 22%;
+	float: right;
+	margin: 3% 7.5% 5% 7.5%;
+height: 50px;
+letter-spacing: 1.2px;
+font-size: 30px;
+cursor: pointer;
+}
+
+
+/*FOOTER*/
+
+footer {
+
+	margin-top: 2.5%;
+}
+#footerText {
+
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.bad {
+
+	display: initial;
+
+}
+
+#footer p {
+
+	font-family: bebas, arial, sans-serif;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	line-height: 30px;
+	text-decoration: none;
+	padding-left: 15px;
+}
+
+.hiddenMobile {
+
+	display: none;
+	border: 2px solid;
+}
+
+}
+
+
+@media screen and (min-width: 1000px) {
+
+
+
+#ingredientsHome .ingredient {
+
+	background-color: rgba(255,255,255,.5);
+	border: 1px solid rgb(46,46,46);
+	margin: 0px;
+	padding: 2px;
+	display: block;
+	width: 100px;
+	margin-top: 17px;
+	
+}
+
+
+
+#ingredientContainerHome {
+
+	float: right;
+	margin-right: 22%;
+}
+
+#searchContainerHome {
+	
+	width: 300px;
+	margin: 0px;
+	float: left;
+	margin-left: 18%;
+}
+
+#searchContainerHome input{
+
+	width: 250px;
+	z-index: 0;
+	display: block;
+	margin-bottom: 10px;
+	border: 1px solid black;
+
+}
+
+/*the searchbar*/
+
+#heroimageText input {
+
+	float: none;
+	width: 100%;
+	height: 46px;
+	z-index: 0;
+	margin-top: 20px;
+	display: block;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	background-color: rgba(255,255,255,.5);
+	
+}
+
+
+
+#heroimageText p{
+
+	z-index: 0;
+	margin-left: 0;
+	margin-right: 0;
+	width: 250px;
+	text-align: left;
+	top: 0;
+	margin-bottom: 30px;
+	display: block;
+	padding: 0;
+	font-size: 1.4em;
+	
+}
+
+
+
+
+/*RECIPE FINDER PAGE*/ 
+
+
+
+#ingredientContainer {
+
+background-color: #565656;
+height: 160px;
+	width: 100%;
+	white-space: initial;
+	overflow-y: initial;
+	overflow-x: initial;
+	-webkit-overflow-scrolling: initial;
+	-ms-overflow-style: initial; 
+   -moz-scrollbars: initial;
+    
+
+}
+
+/*the border on this makes the magnifying glass behave no idea */
+
+.searchBar {
+
+	position: relative;
+	margin-top: 0px;
+	padding: 0px;
+	width: 800px;
+	border: none;
+
+}
+
+.searchBar input {
+	position: relative;
+	border: 1px solid black;
+	height: 40px;
+	background-color: rgba(255,255,255,.5);
+	width: 51%;
+	float: none;
+	margin-right: 2%;
+	margin-top: 25px;
+
+}
+
+#prepTime {
+	position: relative;
+	display: inline-block;
+	width: 15%;
+	float: none;
+	margin-right: 0;
+	margin-top: 1px;
+
+}
+
+#ingredientContainer label {
+
+	color: white;
+	display: block;
+	font-family: 'Open Sans', bebas, sans-serif;
+
+}
+
+#prepTime select {
+
+	position: relative;
+	border: 1px solid black;
+	height: 40px;
+	background-color: rgba(255,255,255,.5);
+	width: 100%;
+	float: none;
+	margin-right: 0;
+	margin-top: 1px;
+
+}
+
+
+input::placeholder {
+
+font-family: bebas;
+padding-left: 3px;
+font-size: 20px;
+line-height: 32px;
+height: 30px;
+}
+
+
+#ingredientContainer button {
+	display: inline;
+	float: left;
+	margin-top: 25px;
+	margin-left: 2%;
+	margin-right: 2%;
+	width: 20%;
+
+}
+
+#ingredientContainerRecipes {
+
+	display: block;
+	padding-top: 17px;
+	padding-left: 20px;
+}
+
+#ingredientContainer hr {
+
+	border-bottom: 1.5px solid white;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	position: relative;
+	width: 95%;
+	display: block;
+	padding-top: 13px;
+	left: 1px;
+	right: 10px;
+	
+}
+
+
+#lowercontentWrapper {
+
+	margin-top: 25px;
+}
+
+#searchResults {
+
+	position: relative;
+	float: right;
+	margin-right: 10%;
+	width: 65%;
+}
+
+
+/* Accordion styles */
+
+#tabContainer {
+
+
+	height: 310px;
+	position: relative;
+	 float: left;
+	 width: 17%;
+	 margin-left: 3%;
+	 background-color: #565656;
+	
+}
+
+#tabContainer p {
+
+	line-height: 90px;
+	text-align: center;
+	color: white;
+	text-decoration: underline;
+	margin-left: 46px;
+}
+
+#tabContainer h2 {
+
+	position: absolute;
+	top: 7px;
+	line-height: 30px;
+	text-align: center;
+	color: white;
+	width: 135px;
+	margin-bottom: 10px;
+	margin-left: 21px;
+	font-size: 20px;
+	margin-top: 2px;
+
+}
+
+
+.tab:nth-child(-n+5) {
+
+border-right: none;
+
+}
+
+.tab:nth-child(1) {
+
+border-right: none;
+padding-top: 88px;
+
+}
+
+.tab {
+
+	float: none;
+	margin-bottom: 15px;
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+
+  color: #fff;
+  overflow: hidden;
+  display: block;
+}
+
+
+.input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: rgb(216, 83, 0);
+  line-height: 2.2;
+  cursor: pointer;
+  font-family: bebas, arial, sans-serif;
+  color: white;
+  font-size: 25px;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #c6c6c6;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+
+}
+
+/*checkboxes labels*/
+
+.tab-content label {
+
+	font-family: 'Open Sans', bebas, sans-serif;
+	color: black;
+	margin-bottom: 40px;
+	}
+
+
+form hr {
+	
+	border-bottom: 1.5px solid #2e2e2e;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	width: 140%;
+	right: 30px;
+	padding: 3px 3px; 
+	position: relative;
+
+
+
+}
+
+/*content*/
+
+.tab-content form {
+  margin: 1em;
+}
+/* :checked, is height of dropdown*/
+.input:checked ~ .tab-content {
+  max-height: 14em;
+}
+
+
+/* Icon */
+.label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 2em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+
+
+form h3 {
+
+	font-family: bebas, arial, sans-serif;
+	font-size: 20px;
+	color: black;
+	padding-bottom: 10px;	
+
+}
+
+/*end accordion*/
+
+
+
+
+/*the results section */
+
+
+#searchResults h2 {
+
+	text-align: left;
+	font-size: 9vw;
+	margin-top: 9%;
+	padding-bottom: 3%;
+	font-family: bebas;
+	font-size: 2em;
+	margin-left: 0;
+
+}
+
+.recipeResults {
+margin-bottom: 10px;
+margin-top: 50px;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.recipeResults h3{
+
+font-family: bebas, arial, sans-serif;
+text-align: left;
+font-size: 2em;
+padding-bottom: 3%;
+color: #d85300 ;
+margin-top: 10px;
+
+}
+
+.resultsimageContainer {
+
+	width: 130px; 
+	height: 130px;
+	overflow: hidden;
+	display: inline-block;
+	margin-left: 0;
+	margin-right: auto;
+
+	
+}
+
+.resultsimageContainer img {
+
+	width: 100%;
+
+}
+
+.recipetextContainer {
+
+	display: inline-block;
+	width: 490px;
+	margin-left: 1%;
+
+}
+
+.recipeResults p {
+
+	display: block;
+	line-height: 25px;
+	font-size: 18px;
+}
+
+.recipeResults a {
+
+	margin-top: 10%;
+	margin-bottom: 0;
+	text-align: left;
+
+
+}
+
+section hr {
+
+border-bottom: 1.5px solid #2e2e2e;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	width: 140%;
+	right: 30px;
+	padding: 3px 3px; 
+	position: relative;
+	color: red;
+
+}
+
+
+.recipeResults a {
+
+	font-family: 'Open Sans', bebas, sans-serif;
+
+	font-weight: bold;
+	color: black;
+
+}
+
+#searchResults hr{
+
+border-bottom: 1.5px solid #2e2e2e;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	width: 80%;
+	right: 30px;
+	padding: 3px 3px; 
+	position: relative;
+	padding: 0;
+
+}
+
+#allrecipeResults {
+
+	margin-bottom: 30px;
+}
+
+
+#end {
+
+	text-align: center;
+	margin-top: 15px;
+
+}
+
+
+fieldset .button {
+
+	width: 22%;
+	float: right;
+	margin: 3% 10% 5% 30%;
+height: 50px;
+letter-spacing: 1.2px;
+font-size: 30px;
+cursor: pointer;
+}
+
+
+
+#smallFields {
+
+	width: 30%;
+	float: left;
+	margin-left: 9%;
+}
+
+
+textarea {
+
+	height: 170px;
+	float: right;
+	width: 50%;
+	margin-left: 0;
+	margin-right: 10%;
+
+}
+
+
+#contactContainer p {
+
+	font-size: 6vw;
+	padding-bottom: 50px;
+}
+
+#contactContainer a {
+	padding-top: 50px;
+	font-size: 5vw;
+}
+
+
+fieldset legend {
+
+	text-align: center;
+	font-family: bebas, arial, sans-serif;
+	font-size: 30px;
+	margin-bottom: 5%;
+}
+
+fieldset input{
+
+
+margin-left: 5%;
+margin-right: 5%;
+
+	
+}
+
+fieldset label {
+
+	margin-left: 5%;
+	font-family: 'Open-Sans', arial, sans-serif;
+
+}
+#textareaLabel {
+
+	margin-left: 11%;
+}
+
+
+
+footer {
+	clear: both;
+}
+
+
+.hiddenMobile {
+
+	display: none;
+	border: 2px solid;
+}
+
+.hiddenDesktop {
+
+	display: initial;
+}
+
+.hiddenTablet {
+
+	display: initial;
+}
+
+
+#accordionHeader {
+
+	display: none;
+}
+}
+
+
+
 
