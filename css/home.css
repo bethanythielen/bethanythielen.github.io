@@ -815,7 +815,7 @@ cursor: pointer;
 }
 
 
-@media screen all and (max-width: 400px) {
+@media screen and (max-width: 400px) {
 
 #heroimageText p {
 
@@ -826,7 +826,7 @@ cursor: pointer;
 
 }
 
-@media screen all and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
 #heroimageContainer img {
 
@@ -1623,7 +1623,7 @@ footer {
 }
 
 
-@media screen all and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 
 
 
