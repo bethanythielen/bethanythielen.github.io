@@ -443,6 +443,7 @@ color: white;
 .searchBar {
 
 	position: relative;
+	width: auto;
 	margin-top: 6px;
 	padding: 5px 20px;
 }
@@ -454,6 +455,13 @@ color: white;
 
 }
 
+#magnifyingGlass3 {
+
+	font-size: 28px;
+	position: absolute;
+	bottom: 18px;
+	left: 90%;
+}
 
 
 input::placeholder {
