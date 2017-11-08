@@ -3,6 +3,7 @@
 	<head>
 		<!--Bethany Thielen-->
 		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+		<script src="https://use.fontawesome.com/3efec12101.js"></script>
 	
 		<title>Thyme for Dinner</title>
 		<meta charset="utf-8">
@@ -63,31 +64,33 @@
 
 						
 						<div id="ingredientContainer">
-							<div class="hiddenDesktop searchBar">
-								<input type="search" name="recipesearch" placeholder="Enter keywords to find recipes">
-								<span id="magnifyingGlass" class="fa fa-search"></span>
+
+							<div id="buttonsContainer">
+								<div class="hiddenDesktop searchBar">
+									<input type="search" name="recipesearch" placeholder="Enter keywords to find recipes">
+									<span id="magnifyingGlass2" class="fa fa-search"></span>
+								</div>
+								<button class="button">&plus; Add Ingredient</button>
+
+								<div class="hiddenDesktop" id="prepTime">
+
+									<label class="hiddenDesktop hiddenTablet">Prep time </label>
+									<select name="time" class="hiddenDesktop hiddenTablet">
+									  <option id="15">&#60; 15 mins</option>
+									  <option id="30">&#60; 30 mins</option>
+			
+									  <option id="none">No limit</option>
+									</select>
+								</div>
+
+						<hr class="hiddenDesktop">
+
+								<div id="ingredientContainerRecipes">
+									<span class="ingredient">Radishes &minus; </span>
+									<span class="ingredient">Mayonaise &minus;</span>
+									<span class="ingredient">Eggs &minus;</span>
 							</div>
-							<button class="button">&plus; Add Ingredient</button>
-
-							<div class="hiddenDesktop" id="prepTime">
-
-								<label class="hiddenDesktop hiddenTablet">Prep time (optional)</label>
-								<select name="time" class="hiddenDesktop hiddenTablet">
-								  <option id="15">&#60; 15 mins</option>
-								  <option id="30">&#60; 30 mins</option>
-		
-								  <option id="none">No limit</option>
-								</select>
-							</div>
-
-					<hr class="hiddenDesktop">
-
-							<div id="ingredientContainerRecipes">
-								<span class="ingredient">Radishes &minus; </span>
-								<span class="ingredient">Mayonaise &minus;</span>
-								<span class="ingredient">Eggs &minus;</span>
 						</div>
-
 					</div>
 				</section>
 
@@ -176,18 +179,26 @@
 							      <div class="tab-content">
 
 							        <form>
-										<input type="checkbox" name="soy" id="soy">
-									    <label for="soy">Soy</label>
 
-									    <input type="checkbox" name="wheat" id="wheat">
-									    <label for="wheat">Wheat</label>
+							        	<div class="boxes">
+											<input type="checkbox" name="soy" id="soy">
+										    <label for="soy">Soy</label>
+										</div>
 
-									   	  
-									    <input type="checkbox" name="dairy" id="dairy">
-									    <label for="dairy">Dairy</label>
-									  
-									    <input type="checkbox" name="treenuts" id="treenuts">
-									    <label for="treenuts">Tree nuts</label>
+									    <div class="boxes">
+										    <input type="checkbox" name="wheat" id="wheat">
+										    <label for="wheat">Wheat</label>
+										</div>
+
+									   	<div class="boxes"> 
+										    <input type="checkbox" name="dairy" id="dairy">
+										    <label for="dairy">Dairy</label>
+										</div>
+
+									  <div class="boxes">
+										    <input type="checkbox" name="treenuts" id="treenuts">
+										    <label for="treenuts">Tree nuts</label>
+										</div>
 									</form>
 				 				 </div>
 								</div><!--
@@ -197,14 +208,21 @@
 							      <div class="tab-content">
 
 							        <form>
-									 	 	<input type="checkbox" name="sugar" id="sugar">
-								    <label for="sugar">Low Sugar</label>
+							        <div class="boxes">
+										<input type="checkbox" name="sugar" id="sugar">
+									    <label for="sugar">Low Sugar</label>
+									  </div>
 
-								    <input type="checkbox" name="carb" id="carb">
-								    <label for="carb">Low Carb</label>
+								   	<div class="boxes">
+									    <input type="checkbox" name="carb" id="carb">
+									    <label for="carb">Low Carb</label>
+									</div>
 
-								    <input type="checkbox" name="fat" id="fat">
-								    <label for="fat">Low Fat</label>
+									<div class="boxes">
+									    <input type="checkbox" name="fat" id="fat">
+									    <label for="fat">Low Fat</label>
+									</div>
+
 									</form>
 				 				 </div>
 								</div><!--
@@ -214,14 +232,21 @@
 							      <div class="tab-content">
 
 							        <form>
-										 <input type="checkbox" name="ketogenic" id="ketogenic">
-									    <label for="ketogenic">Ketogenic</label>
 
-									    <input type="checkbox" name="atkins" id="atkins">
-									    <label for="atkins">Atkins</label>
+							        	<div class="boxes">
+											<input type="checkbox" name="ketogenic" id="ketogenic">
+										    <label for="ketogenic">Ketogenic</label>
+										</div>
 
-									    <input type="checkbox" name="whole30" id="whole30">
-									    <label for="whole30">Whole 30</label>
+										<div class="boxes">
+										    <input type="checkbox" name="atkins" id="atkins">
+										    <label for="atkins">Atkins</label>
+										</div>
+
+										<div class="boxes">
+										    <input type="checkbox" name="whole30" id="whole30">
+										    <label for="whole30">Whole 30</label>
+										</div>
 									</form>
 				 				 </div>
 								</div><!--
@@ -231,11 +256,16 @@
 							      <div class="tab-content">
 
 							        <form>
-									  <input type="checkbox" name="allrecipes" id="allrecipes">
-								    <label for="allrecipes">Allrecipes</label>
 
-								    <input type="checkbox" name="delish" id="delish">
-								    <label for="delish">Delish</label>
+							        <div class="boxes">
+										 <input type="checkbox" name="allrecipes" id="allrecipes">
+									    <label for="allrecipes">Allrecipes</label>
+									</div>
+
+									<div class="boxes">
+									    <input type="checkbox" name="delish" id="delish">
+									    <label for="delish">Delish</label>
+									</div>
 									</form>
 				 				 </div>
 								</div>
@@ -309,7 +339,7 @@
 					<div id="footerText">
 					<h2 class="hidden">Footer</h2>
 						<p class="bad">Call us at 480-245-1357</p>
-					
+
 						<p class="hiddenDesktop">Email us at support@thymefordinner.com</p>
 						<p class="hiddenDesktop">[For educational purposes only]</p>
 						</div>
