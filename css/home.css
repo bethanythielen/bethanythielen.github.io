@@ -381,13 +381,19 @@ height: 40px;
 
 #featured {
 
--webkit-column-count: 1;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    1;
-  -moz-column-gap:      0px;
-  column-count:         1;
-  column-gap:           0px; 
+display: grid;
+display:-ms-grid;
+grid-template-columns: (1fr);
+grid-gap: 15px;
+-ms-grid-column-gap: 5%;
+justify-content: center;
+margin-bottom: 6%;
+width: 80%;
+margin-right: auto;
+margin-left: auto;
+
 }
+ 
 
 .imgContainer {
 
@@ -959,7 +965,8 @@ display: grid;
 display:-ms-grid;
 grid-template-columns: (1fr, 1fr, 1fr);
 grid-column-gap: 5%;
--ms-grid-column-gap: 5%;
+grid-row-gap: 20px;
+-ms-grid-column-gap: 20px;
 justify-content: center;
 margin-bottom: 150px;
 width: 80%;
