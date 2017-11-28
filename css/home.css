@@ -467,6 +467,7 @@ color: white;
 	position: absolute;
 	bottom: 18px;
 	left: 90%;
+
 }
 
 
@@ -741,6 +742,8 @@ margin-top: 6%;
 	padding-left: 4%;
 	padding-right: 4%;
 	line-height: 130%;
+		color: #424242;
+		margin-top: 5%;
 }
 
 #contactContainer {
@@ -1189,8 +1192,8 @@ height: 140px;
 #magnifyingGlass2 {
 
 	position: absolute;
-	left: 490px;
-	top: 35px;
+	left: 710px;
+	top: -33px;
 	font-size: 27px;
 }
 
@@ -1600,19 +1603,20 @@ border-bottom: 1.5px solid #2e2e2e;
 	width: 80%;
 	margin-right: auto;
 	margin-left: auto;
+	color: #424242;
 
 }
 
 #contactContainer p {
 
-	font-size: 6vw;
+	font-size: 5vw;
 	padding-bottom: 70px;
 
 }
 
 #contactContainer a {
 	padding-top: 70px;
-	font-size: 5vw;
+	font-size: 4vw;
 }
 
 
@@ -2265,13 +2269,13 @@ textarea {
 
 #contactContainer p {
 
-	font-size: 6vw;
+	font-size: 5vw;
 	padding-bottom: 70px;
 }
 
 #contactContainer a {
 	padding-top: 70px;
-	font-size: 5vw;
+	font-size: 4vw;
 }
 
 
